@@ -1,2 +1,2 @@
 # documentation
-réuni différentes notes, doc techniques où tips
+Notes, technicals doc or tips for dev 
