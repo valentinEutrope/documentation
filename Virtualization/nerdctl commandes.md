@@ -41,4 +41,11 @@ nerdctl rmi -f $(nerdctl images | grep formio | awk '{print $3}')
 ``` 
 *Attention: supprime totalement tout ce qui à pu être fait dans les volumes.*
 
+ 6. Naviguer dans le serveur
+ 
+Exemple avec formio : 
+```
+nerdctl run --rm -it formio/formio-server sh
+```
+
 
