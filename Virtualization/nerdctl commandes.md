@@ -42,10 +42,26 @@ nerdctl rmi -f $(nerdctl images | grep formio | awk '{print $3}')
 *Attention: supprime totalement tout ce qui à pu être fait dans les volumes.*
 
  6. Naviguer dans le serveur
- 
+
 Exemple avec formio : 
 ```
 nerdctl run --rm -it formio/formio-server sh
+```
+
+ 7. Se connecter à un conteneur
+
+- lister d'abord les conteneurs pour s'assurer du nom : 
+```
+nerdctl ps
+```
+- repérer le conteneur concerné et copier son name. Pour notre exemple : formio-main-formio-1
+Puis exécuter la commande pour vous connecter (en adaptant le name) : 
+```
+nerdctl exec -it formio-main-formio-1 sh
+```
+Si ça ne marche pas, essayer : 
+```
+nerdctl exec -it formio-main-formio-1 /bin/sh
 ```
 
 
