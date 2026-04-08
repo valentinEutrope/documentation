@@ -58,6 +58,8 @@ Les modifications java doivent se build pour apparaître dans AEM à l'instar du
 
 ## Composants
 
+Repo des composants du core : https://github.com/adobe/aem-core-wcm-components
+
 Section traitant de la création d'un composant, de son architecture et de la manière d'y injecter du js et du style. On se base ici sur le site d'exemple WKND. 
 
 ### Créer un nouveau composant
@@ -261,5 +263,5 @@ adapter le port et le nom du fichier jar selon la situation
 
 -   `git remote remove origin`
 -   Vérifier que vous n'avez plus de remote : `git remote -v`
--   `git remote add origin https://[github-user]:[token]@github.com/Desjardins/sfl-aem-dedicated.git`
+-   `git remote add origin https://[github-user]:[token]@github.com/[repo].git`
 -   Tester le fonctionnement : `git fetch --all`
