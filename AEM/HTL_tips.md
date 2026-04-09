@@ -22,6 +22,19 @@
 <h1 data-sly-test="${properties.title}">${properties.title}</h1>
 ```
 
+## Use list
+```html
+<sly data-sly-list.items="${resource.getChildren}">
+	<sly data-sly-test="${items.name == 'itemsNamePropertie'}">
+		<div data-sly-list.item="${items.children}">
+			<div>${item.name}</div>
+		</div>
+	</sly>
+</sly>
+```
+
+The check on items name propertie is optionnal.
+
 ## Call a resource component (without properties)
 ```html
 <sly data-sly-resource="${'myComponentHtml' @ 
@@ -39,6 +52,8 @@ resourceType='project/components/myComponent'}">
 // use
 <sly data-sly-call="${myTemplateComponent.template @ prop1='value', prop2='test'}"></sly>
 ```
+
+Usally put template components on a "partials" folder and use relative path.
 
 ## Use i18n trad
 ```html
