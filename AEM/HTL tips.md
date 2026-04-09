@@ -2,7 +2,7 @@
 
 # HTL Tips
 
-
+doc Adobe : https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/getting-started#
  
 ## Set and use variable
 ```html
@@ -75,3 +75,8 @@ Usally put template components on a "partials" folder and use relative path.
   ...
 }
 ```
+
+## Use context
+doc : https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context 
+
+doc with examples : https://medium.com/@manumathew28.94/htl-display-context-context-38e2fc34d927 
