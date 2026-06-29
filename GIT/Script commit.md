@@ -27,7 +27,7 @@ touch ~/bin/gc.sh
 # Liste des types
 types=("feat" "fix" "build" "chore" "ci" "docs" "style" "refactor" "test")
 
-projet=
+projet="PROJET"
 
 echo "Type de commit :"
 select type in "${types[@]}"; do
@@ -42,12 +42,12 @@ done
 branch=$(git branch --show-current)
 
 # Extraction du ticket (ex: SIRIUS-1234)
-ticket=$(echo "$branch" | grep -oE 'SIRIUS-[0-9]+')
+ticket=$(echo "$branch" | grep -oE '$projet-[0-9]+')
 
 # Si pas trouvé → demander à l'utilisateur
 if [[ -z "$ticket" ]]; then
   read -r -p "Numéro de ticket (xxxx) : " input_ticket
-  ticket="SIRIUS-$input_ticket"
+  ticket="$projet-$input_ticket"
 else
   echo "Ticket détecté : $ticket"
 fi
@@ -69,6 +69,8 @@ fi
 
 git commit -m "$message"
 ```
+Vous pouvez adapter la variable "projet" en début de script avec le nom de votre projet.
+
 - Octroyer les droits d'écritures
 ```bash 
 chmod +x ~/bin/gc
