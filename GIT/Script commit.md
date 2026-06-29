@@ -11,6 +11,8 @@ PROJET = nom du projet
 
 xxxx = numéro du ticket ou de la tâche traitée
 
+Si le nom de votre branche est sous cette forme par exemple : PROJET-XXXX/description. Le script récupère automatiquement le numéro du ticket pour l'incorporer au commit. 
+
 ### Script
 Depuis un terminal bash :
 - Créer un dossier "bin" à la racine utilisateur : 
