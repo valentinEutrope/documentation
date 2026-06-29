@@ -6,7 +6,9 @@ Le but de ce script est de créer rapidement des commits formatés pour votre pr
 [type] PROJET-xxxx: description 
 ```
 type = feat, fix, build, etc.
+
 PROJET = nom du projet
+
 xxxx = numéro du ticket ou de la tâche traitée
 
 ### Script
